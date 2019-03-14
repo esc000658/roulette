@@ -88,17 +88,6 @@ Existen muchas maneras de poner tu `Smart-Contracts` sobre alguna de las redes d
       $ sudo apt-get update
       $ sudo apt-get install ethereum
     ```
-    Creación de una cuenta nuevas:
-    ```git
-      $ geth account new
-    ```
-    > **Nota**: Su nueva cuenta está bloqueada con una contraseña. Por lo que necesitas ingresar una contraseña.
-    ```git
-      password.
-      Passphrase:
-      Repeat Passphrase:
-      Address: {168bc315a2ee09042d83d7c5811b533620531f67}
-    ```
     Iniciamos geth en la red Ropsten.
     ```git
       $ geth --testnet --syncmode "light" --rpc --rpcapi db,eth,net,web3,personal --cache=1024
@@ -107,9 +96,22 @@ Existen muchas maneras de poner tu `Smart-Contracts` sobre alguna de las redes d
     ```git
       $ geth attach http://127.0.0.1:8545
     ```
+    Creación de una cuenta nuevas (Solo en la red que iniciaste):
+    ```git
+      > personal.newAccount()
+    ```
+    > **Nota**: Su nueva cuenta tiene que estas protegida. Por lo que necesitas crear una contraseña.
+    ```git
+     Passphrase:
+     Repeat passphrase: 
+     "0x05204abe320e1d45c229cecd395daf13a4f58f52"
+
+    ```
+    
     Concedemos permisos para truffle puede acceder a nuestra cuenta (realizamos esto cada vez que quieras desplegar un Smart Contract)
     ```git
-      $ personal.unlockAccount(eth.accounts[0])
+      > personal.unlockAccount(eth.accounts[0])
+      true
     ```
 
 ### Instalación del Proyecto
