@@ -88,11 +88,11 @@ Existen muchas maneras de poner tu `Smart-Contracts` sobre alguna de las redes d
       $ sudo apt-get update
       $ sudo apt-get install ethereum
     ```
-    Iniciamos geth en la red Ropsten.
+    Iniciamos geth en la red Ropsten (no cerrar el terminal y que esto crea la conexión con la red ethereum).
     ```git
       $ geth --testnet --syncmode "light" --rpc --rpcapi db,eth,net,web3,personal --cache=1024
     ```
-    Accedemos al nodo una vez que este se haya sincronizado y descargado todos los datos.
+    En otro terminal accedemos al nodo una vez que este se haya sincronizado y descargado todos los datos.
     ```git
       $ geth attach http://127.0.0.1:8545
     ```
