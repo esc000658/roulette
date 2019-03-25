@@ -64,7 +64,7 @@ Existen muchas maneras de poner tu `Smart-Contracts` sobre alguna de las redes d
   ```
 - Instala truffle
   ```git
-    $ sudo npm install -g truffle
+    $ sudo npm install -g truffle@4.1.13
   ```
 - En tu navegador instalar [MetaMask][Metamask] (para poder ejecutar los Smart Contracts)
   ![Match function](https://user-images.githubusercontent.com/7105645/46318508-5f586a00-c59c-11e8-8889-4e2a71f16cd4.PNG)
@@ -141,7 +141,7 @@ Existen muchas maneras de poner tu `Smart-Contracts` sobre alguna de las redes d
     ```
     - Si Usamos geth podemos desplegar con este comando:
     ```git
-      $ truffle migrate --network rospten --reset
+      $ truffle migrate --network ropsten --reset
     ```
   - Accedemos por consola a la dirección de nuestro proyecto y ejecutamos estos comando, para compilar desplegar el Smart Contract.
   ```git
